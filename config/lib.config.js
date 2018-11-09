@@ -3,7 +3,7 @@
  * 
  */
 module.exports = {
-    libraryName: 'gittask', // npm包名，首字母不允许大写，支持驼峰和短杆写法
+    libraryName: '@alanchenchen/gittask', // npm包名，首字母不允许大写，支持驼峰和短杆写法
     bundleName: 'gitTask', // 打包后文件名，也是UMD script直接引入挂在windows对象的key名
     version: '0.0.1', // 版本号
     description: 'A plugin CLI to task your git operations ', // 包描述

@@ -27,17 +27,17 @@ A plugin CLI to task your git operations.将git命令模块组合的CLI插件
 ![](./screenshot/task1.png)
 
 ## Usage
-* `yarn add gittask` or `npm install gittask --save` 安装依赖
+* `yarn add @alanchenchen/gittask` or `npm install @alanchenchen/gittask --save` 安装依赖
 * 在项目根目录新建一个js文件，例如`wrok.js`，在其中调用如下：
 ```js
-    const { WorkFlow } = require('gittask/index')
-    const questFlow = require('gittask/commands/questFlow')
-    const showBranch = require('gittask/commands/showBranch')
-    const modifyOldBranch = require('gittask/commands/modifyOldBranch') 
-    const addModifiedFile = require('gittask/commands/addModifiedFile') 
-    const commit = require('gittask/commands/commit') 
-    const push = require('gittask/commands/push') 
-    const deleteOrigin = require('gittask/commands/deleteOrigin')
+    const { WorkFlow } = require('@alanchenchen/gittask/index')
+    const questFlow = require('@alanchenchen/gittask/commands/questFlow')
+    const showBranch = require('@alanchenchen/gittask/commands/showBranch')
+    const modifyOldBranch = require('@alanchenchen/gittask/commands/modifyOldBranch') 
+    const addModifiedFile = require('@alanchenchen/gittask/commands/addModifiedFile') 
+    const commit = require('@alanchenchen/gittask/commands/commit') 
+    const push = require('@alanchenchen/gittask/commands/push') 
+    const deleteOrigin = require('@alanchenchen/gittask/commands/deleteOrigin')
 
     /* 插件内置13个常用的命令扩展，先引入，然后自由组合，task内会按照索引顺序依次执行 */
     const task = [showBranch, questFlow, modifyOldBranch, addModifiedFile, commit, push, deleteOrigin]
@@ -77,7 +77,7 @@ A plugin CLI to task your git operations.将git命令模块组合的CLI插件
 ```js
     const chalk = require('chalk') // 让终端写入流文本颜色改变的模块
     const inquirer = require('inquirer') // 终端可读流交互的模块
-    const { git, shell } = require('../utils') // 插件自带的shell方法和默认git参数
+    const { git, shell } = require('@alanchenchen/gittask') // 插件自带的shell方法和默认git参数
 
     // 一定要导出一个异步函数,可选接收一个参数，param是task中前一个命令扩展传入的参数
     module.exports = async (param) => {
