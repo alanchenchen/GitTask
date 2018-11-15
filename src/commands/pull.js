@@ -5,7 +5,7 @@ const { git, shell } = require('../utils')
 
 module.exports = async () => {
     const res = await shell(git.showBranch)
-    const branchList = res.split('\n').map(a => a.slice(1).trim()).filter(b => Boolean(b))
+    const branchList = res.split('\n').filter(a => a.includes('remotes/origin')).map(b => b.split('/')[2])
 
     const { nBranch } = await inquirer.prompt([
         {
@@ -19,8 +19,11 @@ module.exports = async () => {
     const spinner = ora('拉取远程仓库分支到本地...')
     spinner.start()
 
-    if(Boolean(branch)) {
+    if(Boolean(nBranch)) {
         await shell(git.pull, [`${nBranch}`])
+    }
+    else {
+        process.exit(1)
     }
 
     spinner.succeed() 
