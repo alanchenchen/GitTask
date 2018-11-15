@@ -18,6 +18,7 @@ const git = {
     checkoutBranch: ['checkout'],
     deleteBranch: ['branch', '-d'],
     commitFile: ['commit', '-m'],
+    pull: ['pull', 'origin'],
     push: ['push', 'origin'],
     deleteOrigin: ['push', 'origin', '--delete']
 }

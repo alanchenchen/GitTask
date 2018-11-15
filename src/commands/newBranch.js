@@ -18,5 +18,6 @@ module.exports =  async () => {
 
     if(nBranch) {
         await shell(git.newBranch, [`${nBranch}`])
+        return nBranch
     }
 }
