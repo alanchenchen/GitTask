@@ -8,7 +8,7 @@ const { execFile } = require('child_process')
 const GITCMD = 'git'
 const git = { 
     checkVersion: ['version'],
-    addModifiedFile: ['add', '.'],
+    addModifiedFile: ['add', '-A'],
     showStatus: ['status'],
     showLog: ['log'],
     showDiff: ['diff'],

@@ -1,6 +1,6 @@
 {
   "name": "@alanchenchen/gittask",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "author": "Alan Chen",
   "description": "A plugin CLI to task your git operations ",
   "main": "src/index.js",

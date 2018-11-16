@@ -4,9 +4,9 @@ A plugin CLI to task your git operations.将git命令模块组合的CLI插件
 
 > E-mail: 739709491@qq.com
 
-> version: 0.0.4
+> version: 0.0.6
 
-> date: 2018/11/15
+> date: 2018/11/16
 
 > 只能通过node来执行
 
