@@ -1,4 +1,10 @@
 # GitTask
+
+![](https://img.shields.io/npm/v/@alanchenchen/gittask.svg)
+![](https://img.shields.io/node/v/@alanchenchen/gittask.svg)
+![](https://img.shields.io/npm/dt/@alanchenchen/gittask.svg)
+![](https://img.shields.io/github/license/alanchenchen/GitTask.svg)
+
 A plugin CLI to task your git operations.将git命令模块组合的CLI插件
 > Author：Alan Chen
 
